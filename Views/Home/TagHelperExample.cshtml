@@ -1,0 +1,37 @@
+﻿@model RegistrationForTagHelper
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@*Example1 on action and Controller*@
+@*<form asp-action="TagHelperExample" asp-controller="Home" asp-route-id="1211" method="post">
+    <button type="submit">Submit</button>
+</form>
+
+<a asp-action="ClickMethod" asp-controller="Home" asp-route-name="Hello">Click</a>*@
+
+@*Example2 on action and Controller*@
+<!--<form asp-action="TagHelperExample2" asp-controller="Home" asp-route-id="1211" asp-route-place="Hyd" method="post">
+    <button type="submit">Submit</button>
+</form>-->
+
+@*Example2 on action and Controller*@
+<form asp-route="TagHelperRoute" method="get">
+    <button type="submit">Submit</button>
+</form>
+
+<a asp-controller="Home" asp-action="TagHelperExample" asp-fragment="Cargo">HomeCargo</a>
+<a asp-protocol="https" asp-host="microsoft.com" asp-controller="Home" asp-action="About">About</a>
+
+<form asp-controller="Home" asp-action="RegisterInput" method="post">
+    Email:  <input asp-for="EmpName" /> <br />
+    Salary: <input asp-for="EmpSalary" /><br />
+    Address: <textarea asp-for="Address"></textarea>
+    Agreement:<input asp-for="Ischecked" />
+    <select  asp-for="EmpNames" asp-items="@ViewBag.employees">
+  </select>
+
+            <button type="submit">Register</button>
+</form>

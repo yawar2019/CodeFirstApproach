@@ -13,4 +13,16 @@ namespace CodeFirstApproach.Models
         public string EmpName { get; set; }
         public int EmpSalary { get; set; }
     }
+
+    public class RegistrationForTagHelper
+    {
+        [Key]
+        public int EmpId { get; set; }
+        public string EmpName { get; set; }
+        public string EmpNames { get; set; }
+        public int EmpSalary { get; set; }
+        public string Address { get; set; }
+        public bool Ischecked { get; set; }
+
+    }
 }
